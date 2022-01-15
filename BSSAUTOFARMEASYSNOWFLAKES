@@ -3,227 +3,138 @@
 
 -- Instances:
 
-local YOUAREANIDIOT = Instance.new("ScreenGui")
-local XP = Instance.new("ImageLabel")
-local TAB = Instance.new("Frame")
-local FRAME = Instance.new("Frame")
-local FRAME_2 = Instance.new("Frame")
-local FRAME_3 = Instance.new("Frame")
-local FLASH = Instance.new("ImageLabel")
-local CLOSE = Instance.new("TextButton")
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local Hub = Instance.new("Frame")
+local Roundify = Instance.new("ImageLabel")
+local Scripthub = Instance.new("TextLabel")
+local Roundify_2 = Instance.new("ImageLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local AutoFarm = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
 
 --Properties:
 
-YOUAREANIDIOT.Name = "YOU ARE AN IDIOT"
-YOUAREANIDIOT.Parent = game.Workspace.MainModule
-YOUAREANIDIOT.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-YOUAREANIDIOT.ResetOnSpawn = false
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-XP.Name = "XP"
-XP.Parent = YOUAREANIDIOT
-XP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-XP.BackgroundTransparency = 1.000
-XP.Size = UDim2.new(1, 0, 1, 0)
-XP.ZIndex = 99998
-XP.Image = "rbxassetid://5110070559"
-XP.ImageTransparency = 1.000
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.BackgroundColor3 = Color3.fromRGB(175, 76, 255)
+Main.BackgroundTransparency = 0.200
+Main.Position = UDim2.new(0.499479175, 0, 0.499536604, 0)
+Main.Size = UDim2.new(1, 0, 1, 0)
 
-TAB.Name = "TAB"
-TAB.Parent = XP
-TAB.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TAB.BackgroundTransparency = 1.000
-TAB.Position = UDim2.new(0.0558659211, 0, 0.245931283, 0)
-TAB.Size = UDim2.new(0.146368727, 0, 0.23815313, 0)
-TAB.ZIndex = 99999
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.277039826, 0, 0.0102040814, 0)
+TextLabel.Size = UDim2.new(0, 704, 0, 65)
+TextLabel.Font = Enum.Font.Jura
+TextLabel.Text = "Bee Swarm Simulator Hub, welcome!"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
 
-FRAME.Name = "FRAME"
-FRAME.Parent = TAB
-FRAME.BackgroundColor3 = Color3.fromRGB(0, 49, 49)
-FRAME.BorderSizePixel = 0
-FRAME.Size = UDim2.new(1, 0, 0.0176322591, 0)
+Hub.Name = "Hub"
+Hub.Parent = ScreenGui
+Hub.AnchorPoint = Vector2.new(0.5, 0.5)
+Hub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hub.BackgroundTransparency = 1.000
+Hub.BorderSizePixel = 0
+Hub.Position = UDim2.new(0, 0, 0.214285716, 0)
+Hub.Size = UDim2.new(0, 346, 0, 462)
 
-FRAME_2.Name = "FRAME"
-FRAME_2.Parent = TAB
-FRAME_2.BackgroundColor3 = Color3.fromRGB(0, 49, 49)
-FRAME_2.BackgroundTransparency = 0.300
-FRAME_2.BorderSizePixel = 0
-FRAME_2.Position = UDim2.new(0, 0, 0.0125944559, 0)
-FRAME_2.Size = UDim2.new(1, 0, 0.0617128573, 0)
+Roundify.Name = "Roundify"
+Roundify.Parent = Hub
+Roundify.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Roundify.BackgroundTransparency = 1.000
+Roundify.Position = UDim2.new(1.03468204, 0, 0.835497797, 0)
+Roundify.Size = UDim2.new(1, 24, 1, 24)
+Roundify.ZIndex = 2
+Roundify.Image = "rbxassetid://3570695787"
+Roundify.ImageColor3 = Color3.fromRGB(27, 27, 27)
+Roundify.ImageTransparency = 0.200
+Roundify.ScaleType = Enum.ScaleType.Slice
+Roundify.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify.SliceScale = 0.120
 
-FRAME_3.Name = "FRAME"
-FRAME_3.Parent = TAB
-FRAME_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-FRAME_3.BorderSizePixel = 0
-FRAME_3.Position = UDim2.new(0, 0, 0.0692697018, 0)
-FRAME_3.Size = UDim2.new(1, 0, 0.930730343, 0)
+Scripthub.Name = "Scripthub"
+Scripthub.Parent = Roundify
+Scripthub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Scripthub.BackgroundTransparency = 1.000
+Scripthub.Position = UDim2.new(4.12399714e-08, 0, 0.0349794254, 0)
+Scripthub.Size = UDim2.new(0, 351, 0, 64)
+Scripthub.Font = Enum.Font.Jura
+Scripthub.Text = "ScriptHub"
+Scripthub.TextColor3 = Color3.fromRGB(0, 0, 0)
+Scripthub.TextScaled = true
+Scripthub.TextSize = 20.000
+Scripthub.TextWrapped = true
 
-FLASH.Name = "FLASH"
-FLASH.Parent = FRAME_3
-FLASH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-FLASH.BackgroundTransparency = 1.000
-FLASH.Position = UDim2.new(0, 0, 0.00611599861, 0)
-FLASH.Size = UDim2.new(1, 0, 0.993883908, 0)
+Roundify_2.Name = "Roundify"
+Roundify_2.Parent = Roundify
+Roundify_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Roundify_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Roundify_2.BackgroundTransparency = 1.000
+Roundify_2.LayoutOrder = 1
+Roundify_2.Position = UDim2.new(0.473715067, 0, 0.664063454, 0)
+Roundify_2.Size = UDim2.new(0.656756759, 24, 0.304526776, 24)
+Roundify_2.ZIndex = 2
+Roundify_2.Image = "rbxassetid://3570695787"
+Roundify_2.ImageColor3 = Color3.fromRGB(182, 98, 255)
+Roundify_2.ScaleType = Enum.ScaleType.Slice
+Roundify_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Roundify_2.SliceScale = 0.120
 
-CLOSE.Name = "CLOSE"
-CLOSE.Parent = TAB
-CLOSE.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-CLOSE.BorderSizePixel = 0
-CLOSE.Position = UDim2.new(0.829268277, 0, 0.00629722793, 0)
-CLOSE.Size = UDim2.new(0.170731723, 0, 0.0617128573, 0)
-CLOSE.Font = Enum.Font.SourceSans
-CLOSE.Text = "X"
-CLOSE.TextColor3 = Color3.fromRGB(0, 0, 0)
-CLOSE.TextScaled = true
-CLOSE.TextSize = 14.000
-CLOSE.TextWrapped = true
+TextLabel_2.Parent = Roundify_2
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.500232816, 0, 0.49713853, 0)
+TextLabel_2.Size = UDim2.new(0, 206, 0, 141)
+TextLabel_2.ZIndex = 5
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "More scripts are coming very soon! Dm RblxDev#7323 if any bugs occur!"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
 
--- Module Scripts:
+AutoFarm.Name = "AutoFarm"
+AutoFarm.Parent = Roundify
+AutoFarm.BackgroundColor3 = Color3.fromRGB(8, 255, 152)
+AutoFarm.Position = UDim2.new(0.170270264, 0, 0.209876537, 0)
+AutoFarm.Size = UDim2.new(0, 222, 0, 46)
+AutoFarm.Font = Enum.Font.Jura
+AutoFarm.Text = "Snowflakes autofarm"
+AutoFarm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoFarm.TextScaled = true
+AutoFarm.TextSize = 14.000
+AutoFarm.TextWrapped = true
 
-local fake_module_scripts = {}
-
-do -- nil.MainModule
-	local script = Instance.new('ModuleScript', nil)
-	script.Name = "MainModule"
-	local function module_script()
-		local UAREAIDIOT = {}
-		
-		function INSERT(PLAYER)
-			local VIRUS=script["YOU ARE AN IDIOT"]:clone()
-			VIRUS.Parent=PLAYER.PlayerGui
-			warn("YOU ARE AN IDIOT "..PLAYER.Name)
-		end 
-		
-		function UAREAIDIOT:INFECT()
-			for i,v in pairs(game:GetService("Players"):children())do
-				INSERT(v)
-			end
-			game:GetService("Players").PlayerAdded:connect(function(p)
-				INSERT(p)
-			end)
-			warn("GET FUCKING TROLLED BITCH!")
-		end
-		return UAREAIDIOT
-		
-	end
-	fake_module_scripts[script] = module_script
-end
-
+TextButton.Parent = AutoFarm
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Size = UDim2.new(1, 0, 1, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+TextButton.TextTransparency = 1.000
 
 -- Scripts:
 
-local function OTFHPR_fake_script() -- YOUAREANIDIOT.LocalScript 
-	local script = Instance.new('LocalScript', YOUAREANIDIOT)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
+local function JUAW_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
 
-	wait(1)
-	local i=0
-	script.Parent.ADD_TAB.Event:Connect(function()
-		local TAB=script.Parent.XP.TAB:Clone()
-		TAB.Parent=script.Parent.XP
-		TAB.Position=UDim2.new(UDim.new((i),0),UDim.new((i),0))
-		i=i+.02		
+	local LocalPlayer = game:GetService("Players").LocalPlayer
+	script.Parent.Activated:Connect(function()
+		LocalPlayer:Kick("don't use cheats and exploits, you are not cooler when you are using them, you are dumber./Не используй читы, ты не становишься круче, ты становишься только тупее.")
 	end)
 	
-	local fonts={"Cartoon","Code","SourceSans","Gotham","SciFi","GothamBlack","Fantasy","Garamond","Highway","Legacy","SourceSansBold","SourceSansLight","Arcade","Arial","ArialBold"}
-	local plr=game:service"Players".LocalPlayer
-	while true do
-		game:GetService("RunService").RenderStepped:wait()
-		--local val=#script.Parent.XP:children()
-		--workspace.CurrentCamera.FieldOfView=70-math.random(1,val)
-		local p=plr.PlayerGui 
-		for i,v in pairs(p:GetDescendants())do
-			if v:isA"TextLabel"or v:isA"TextBox" or v:isA"TextButton"then
-				local font=fonts[math.random(1,#fonts)]
-				v.Font=font
-				v.Text="YOU ARE AN IDIOT NOONE LIKES YOU YOUR PARENTS DONT CARE ABOUT YOU HAHAHAHAHAH!"
-			end
-		end
-		local w=workspace
-		for i,v in pairs(w:GetDescendants())do
-			if v:isA"TextLabel"or v:isA"TextBox"or v:isA"Message"or v:isA"Hint"then
-				local font=fonts[math.random(1,#fonts)]
-				v.Font=font
-	                        v.Text="YOU ARE AN IDIOT DUM ASS!"
-			end
-		end	
-	end
-end
-coroutine.wrap(OTFHPR_fake_script)()
-local function NRNF_fake_script() -- FLASH.LocalScript 
-	local script = Instance.new('LocalScript', FLASH)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
-	local tim=.5
-	local black="http://www.roblox.com/asset/?id=35237735"
-	local white="http://www.roblox.com/asset/?id=35237757"
 	
-	function set(id)
-		script.Parent.Image=id
-	end
-	while wait()do
-		wait(tim)
-		set(black)
-		wait(tim)
-		set(white)
-		wait(tim)
-		set(black)
-		wait(tim)
-		set(white)
-	end
 end
-coroutine.wrap(NRNF_fake_script)()
-local function YTWAQV_fake_script() -- CLOSE.LocalScript 
-	local script = Instance.new('LocalScript', CLOSE)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
-	script.Parent.MouseButton1Down:Connect(function()
-		script.Parent.Parent.Parent.Parent.ADD_TAB:Fire()
-	end)
-end
-coroutine.wrap(YTWAQV_fake_script)()
-local function VOEB_fake_script() -- TAB.LocalScript 
-	local script = Instance.new('LocalScript', TAB)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
-	script.Parent.Active=true
-	script.Parent.Selectable=true
-	script.Parent.Draggable=true
-	
-	local sound=Instance.new("Sound")
-	
-	sound.Parent=script
-	sound.Volume=10
-	sound.SoundId="rbxassetid://138168279"
-	sound.Name="YOUR AN IDIOT!"
-	sound.Looped=true
-	sound:Play()
-end
-coroutine.wrap(VOEB_fake_script)()
+coroutine.wrap(JUAW_fake_script)()
